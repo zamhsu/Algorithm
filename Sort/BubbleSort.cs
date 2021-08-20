@@ -2,6 +2,10 @@ namespace Sort
 {
     public class BubbleSort
     {
+        /// <summary>
+        /// 一般版
+        /// </summary>
+        /// <param name="array">數字陣列</param>
         public static void Sort(int[] array)
         {
             // 比較次數，從陣列最大值開始倒數
@@ -17,6 +21,12 @@ namespace Sort
             }
         }
 
+        /// <summary>
+        /// 陣列值交換
+        /// </summary>
+        /// <param name="array">數字陣列</param>
+        /// <param name="indexA">要交換的索引值</param>
+        /// <param name="indexB">要被交換的索引值</param>
         private static void Swap(int[] array, int indexA, int indexB)
         {
             int tmp = array[indexA];
