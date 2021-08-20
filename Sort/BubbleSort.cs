@@ -43,11 +43,12 @@ namespace Sort
                         Swap(array, j, j + 1);
                         isSwapped = true;
                     }
-                    
-                    // 沒有交換代表已經排序完成，不再處理這一輪
-                    if (!isSwapped)
-                        break;
-                }
+                }    
+                // 沒有交換代表已經排序完成，不再處理
+                // 有機會是排序好的，達到最佳時間複雜度O(n)
+                if (!isSwapped)
+                    break;
+                
             }
         }
 
