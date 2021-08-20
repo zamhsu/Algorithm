@@ -1,9 +1,12 @@
 namespace Sort
 {
+    /// <summary>
+    /// 泡沫排序
+    /// </summary>
     public class BubbleSort
     {
         /// <summary>
-        /// 一般版
+        /// 一般版（時間複雜度O(n^2))
         /// </summary>
         /// <param name="array">數字陣列</param>
         public static void Sort(int[] array)
@@ -17,6 +20,33 @@ namespace Sort
                     // 比較相鄰的兩個元素，前面的元素較大就交換
                     if (array[j] > array[j + 1])
                         Swap(array, j, j + 1);
+                }
+            }
+        }
+
+        /// <summary>
+        /// 旗標版（時間複雜度O(n^2) / O(n))
+        /// </summary>
+        /// <param name="array">數字陣列</param>
+        public static void FlagSort(int[] array)
+        {
+            // 比較次數，從陣列最大值開始倒數
+            for (int i = array.Length - 1; i > 0; i--)
+            {
+                bool isSwapped = false;
+                // 從陣列最左邊開始比較，不斷比對直到排右邊適當的位置
+                for (int j = 0; j < i; j++)
+                {
+                    // 比較相鄰的兩個元素，前面的元素較大就交換
+                    if (array[j] > array[j + 1])
+                    {
+                        Swap(array, j, j + 1);
+                        isSwapped = true;
+                    }
+                    
+                    // 沒有交換代表已經排序完成，不再處理這一輪
+                    if (!isSwapped)
+                        break;
                 }
             }
         }
