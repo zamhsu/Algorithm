@@ -8,6 +8,9 @@ namespace Sort
     /// </summary>
     public class SelectionSort
     {
+        // 主要概念為反覆從未排序的數列中取出最小的元素
+        // 加入到另一個的數列的末端，結果即為已排序的數列
+
         /// <summary>
         /// 額外空間版（時間複雜度O(n^2)）
         /// </summary>
