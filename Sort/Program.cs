@@ -15,7 +15,11 @@ namespace Sort
 
             // 選擇排序
             //SelectionSort.ExtraSpaceSort(array);
-            SelectionSort.InPlaceSort(array);
+            //SelectionSort.InPlaceSort(array);
+
+            // 插入排序
+            //InsertionSort.ExtraSpaceSort(array);
+            InsertionSort.InPlaceSort(array);
 
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < array.Length; i++)
