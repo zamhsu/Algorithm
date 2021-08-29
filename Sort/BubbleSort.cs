@@ -5,6 +5,9 @@ namespace Sort
     /// </summary>
     public class BubbleSort
     {
+        // 主要概念為比較相鄰的兩個元素，若前面的元素較大就進行交換
+        // 將最大的數值移動到陣列最後面，而較小的數值則逐漸的往陣列前端移動
+
         /// <summary>
         /// 一般版（時間複雜度O(n^2))
         /// </summary>
